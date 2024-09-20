@@ -7,9 +7,15 @@
 
     <!-- MY CSS -->
      <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <nav>
+<body id="body" class="tt-transition">
+    <!-- <div id="page-transition" class="preload">
+        <h1 id="myText">Welcome</h1>
+    </div> -->
+    <nav data-aos="fade-down" data-aos-duration="900">
         <div class="wrapper-logo">
             <a href="#"><img src="./assets/img/logo/logolight.png" alt="logonih"></a>
         </div>
@@ -29,19 +35,19 @@
                 <div class="wrapper-hero-textcta">
                     <div class="wrapper-hero-texthead">
                         <div class="wrapper-hero-text">
-                            <h1>Creating <span>Visual Journeys for <br>Digital Products</span></h1>
+                            <h1 id="myText">Creating Visual Journey for Digital Products</h1>
                         </div>
                         <div class="wrapper-hero-textp">
-                            <p>Hi There ! I'm Alfian Nur, who passionate UI and Product Designer dedicated to <br>crafting exceptional digital products with 3+ years experience.</p>
+                            <p data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in" data-aos-delay="2200" data-aos-offset="200">Hi There ! I'm Alfian Nur, who passionate UI and Product Designer dedicated to <br>crafting exceptional digital products with 3+ years experience.</p>
                         </div>
                     </div>
                     <div class="wrapper-hero-cta">
-                        <a class="ctasecondary" href="about.html">Little story about me</a>
-                        <a class="ctaprimary" href="mailto: alfiannurkholilludin@gmail.com">Let's talk</a>
+                        <a data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in" data-aos-delay="3000" data-aos-offset="200" class="ctasecondary" href="about.html">Little story about me</a>
+                        <a data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in" data-aos-delay="3000" data-aos-offset="200" class="ctaprimary" href="mailto: alfiannurkholilludin@gmail.com">Let's talk</a>
                     </div>
                 </div>
                 <div class="wrapper-hero-image">
-                    <img src="./assets/img/hero/mascot.png" alt="hero">
+                    <img data-aos="fade-in" data-aos-duration="900" data-aos-easing="ease-in" data-aos-delay="3000"  src="./assets/img/hero/mascot.png" alt="hero">
                 </div>
             </div>
         </section>
@@ -86,7 +92,7 @@
         <section class="wrapper-project">
             <div class="wrapper-project-content">
                 <div class="cursor" id="cursor">
-                    <span class="cursor__inner" id="cursor-inner">View</span>
+                    <span class="cursor__inner" id="cursor-inner">View case</span>
                 </div>
                 <div class="wrapper-project-title">
                     <p>Selected Project</p>
@@ -210,6 +216,46 @@
             cursorInner.style.opacity = 0;
         });
     });
+   </script>
+
+   <!-- <script>
+    jQuery('.progress-wrap').on('click', function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+   </script>
+
+   <script>
+    jQuery(window).on('scroll', function() {
+        if(jQuery(this).scrollTop() > offset) {
+            jQuery('.progress-wrap').addClass('active-progress');
+        } else {
+            jQuery('.progress-wrap').removeClass('active-progress');
+        }
+    });
+   </script> -->
+
+   <!-- GSAP -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+   <!-- Split Type -->
+   <script src="https://unpkg.com/split-type"></script>
+   <script>
+    const myText = new SplitType('#myText');
+
+    gsap.to('.char', {
+        y: 0,
+        stagger: 0.05,
+        delay: 0.2,
+        duration: .1
+    })
+   </script>
+
+   <!-- AOS -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+     AOS.init();
    </script>
 </body>
 </html>
