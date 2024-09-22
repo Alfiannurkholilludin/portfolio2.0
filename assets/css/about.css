@@ -6,7 +6,7 @@
 
 .wrapper-about-content {
     width: 100%;
-    height: 140vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,3 +87,96 @@
     color: #0f0f0f;
     background: #f5f5f5;
   }
+/* My experiences Styling */
+.wrapper-experiences-content {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.wrapper-experiences-text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrapper-experiences-text h4 {
+  color: rgba(204, 204, 204, 0.8);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.wrapper-experiences-text h1 {
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.wrapper-experiences-text p {
+  color: rgba(204, 204, 204, 0.8);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.wrapper-experiences-text p span a {
+  color: rgba(204, 204, 204, 0.8);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.wrapper-job-experiences {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrapper-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.office-text {
+  width: 100%;
+  color: rgba(205, 205, 205, 1);
+  font-size: 18px;
+  text-align: left;
+}
+
+.jobtitle-text {
+  width: 100%;
+  color: rgba(204, 204, 204, 0.8);
+  font-size: 18px;
+  text-align: left;
+}
+
+.experiences-text {
+  width: 100%;
+  color: rgba(204, 204, 204, 0.8);
+  font-size: 18px;
+  text-align: left;
+}
