@@ -90,11 +90,14 @@
 /* My experiences Styling */
 .wrapper-experiences-content {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   display: flex;
+  positionn: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #05050A;
+  z-index: 100;
   gap: 32px;
 }
 

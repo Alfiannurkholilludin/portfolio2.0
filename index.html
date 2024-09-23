@@ -147,13 +147,13 @@
                 </div>
             </div>
         </section>
+        
+        <footer class="wrapper-footer">
+            <div class="wrapper-footer-content">
+                <img src="./assets/img/Footer.png" alt="footer">
+            </div>
+        </footer>
     </main>
-
-    <footer class="wrapper-footer">
-        <div class="wrapper-footer-content">
-            <img src="./assets/img/Footer.png" alt="footer">
-        </div>
-    </footer>
 
     <!-- MY JS -->
    <script src="./assets/js/app.js"></script>
@@ -165,7 +165,6 @@
        const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
-        console.log(e)
         })
 
         function raf(time) {
@@ -240,7 +239,27 @@
 
    <!-- GSAP -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+   <script>
+    let footer = document.querySelector(".wrapper-footer"),
+    getOverlap = () => Math.min(window.innerHeight, footer.offsetHeight), // we never want it to overlap more than the height of the screen
+    adjustFooterOverlap = () => footer.style.marginTop = -getOverlap() + "px"; // adjusts the margin-top of the footer to overlap the proper amount
+
+    adjustFooterOverlap();
+
+    // to make it responsive, re-calculate the margin-top on the footer when the ScrollTriggers revert
+    ScrollTrigger.addEventListener("revert", adjustFooterOverlap);
+
+    // magic
+    ScrollTrigger.create({
+    trigger: footer,
+    start: () => "top " + (window.innerHeight - getOverlap()),
+    end: () => "+=" + getOverlap(),
+    pin: true,
+    });
+   </script>
+
    <!-- Split Type -->
    <script src="https://unpkg.com/split-type"></script>
    <script>
@@ -251,7 +270,7 @@
         stagger: 0.05,
         delay: 0.2,
         duration: .1
-    })
+    });
    </script>
 
    <!-- AOS -->

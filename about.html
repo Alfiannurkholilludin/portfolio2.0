@@ -102,10 +102,55 @@
                 </div>
             </div>
           </section>
+
+          <section class="wrapper-sosmed">
+            <div class="wrapper-sosial-content">
+                <div class="wrapper-sosial-text">
+                    <h4>Need a Designer?</h4>
+                    <a href="mailto: alfiannurkholilludin@gmail.com">Let's work together</a>
+                </div>
+                <div class="wrapper-sosial-link">
+                    <a href="#">Instagram</a>
+                    <a href="#">Dribbble</a>
+                    <a href="#">Behance</a>
+                    <a href="#">Linkedin</a>
+                </div>
+            </div>
+        </section>
+
+          <footer class="wrapper-footer">
+            <div class="wrapper-footer-content">
+                <img src="./assets/img/Footer.png" alt="footer">
+            </div>
+        </footer>
     </main>
 
      <!-- My JS -->
      <script src="assets/js/app.js"></script>
+
+     <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+    let footer = document.querySelector(".wrapper-footer"),
+        getOverlap = () => Math.min(window.innerHeight, footer.offsetHeight), // we never want it to overlap more than the height of the screen
+        adjustFooterOverlap = () => footer.style.marginTop = -getOverlap() + "px"; // adjusts the margin-top of the footer to overlap the proper amount
+
+        adjustFooterOverlap();
+
+        // to make it responsive, re-calculate the margin-top on the footer when the ScrollTriggers revert
+        ScrollTrigger.addEventListener("revert", adjustFooterOverlap);
+
+        // magic
+        ScrollTrigger.create({
+        trigger: footer,
+        start: () => "top " + (window.innerHeight - getOverlap()),
+        end: () => "+=" + getOverlap(),
+        pin: true,
+    });
+    </script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
